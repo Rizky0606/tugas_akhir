@@ -17,43 +17,43 @@ import { auth } from "./firebase";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 const App = () => {
-  const [isLogin, setIsLogin] = useState(false);
+  // const [isLogin, setIsLogin] = useState(false);
 
-  useEffect(() => {
-    const auth = getAuth();
-    onAuthStateChanged(auth, (result) => {
-      if (result) {
-        setIsLogin(true);
-        return;
-      }
-      setIsLogin(false);
-    });
-  }, []);
+  // useEffect(() => {
+  //   const auth = getAuth();
+  //   onAuthStateChanged(auth, (result) => {
+  //     if (result) {
+  //       setIsLogin(true);
+  //       return;
+  //     }
+  //     setIsLogin(false);
+  //   });
+  // }, []);
 
   return (
     <>
-      {isLogin ? (
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/student" element={<Student />} />
+      {/* {isLogin ? ( */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/student" element={<Student />} />
 
-          <Route path="/student/add" element={<AddStudent />} />
-          <Route path="/student/profile/:id" element={<ProfileStudent />} />
-          <Route path="/student/edit/:id" element={<EditStudent />} />
+        <Route path="/student/add" element={<AddStudent />} />
+        <Route path="/student/profile/:id" element={<ProfileStudent />} />
+        <Route path="/student/edit/:id" element={<EditStudent />} />
 
-          <Route path="/dosen" element={<Dosen />} />
-          <Route path="/dosen/add" element={<AddDosen />} />
-          <Route path="/dosen/:id" element={<EditDosen />} />
+        <Route path="/dosen" element={<Dosen />} />
+        <Route path="/dosen/add" element={<AddDosen />} />
+        <Route path="/dosen/:id" element={<EditDosen />} />
 
-          <Route path="/login" element={<Home />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      ) : (
-        <Routes>
-          <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+      {/* ) : ( */}
+      {/* <Routes> */}
+      {/* <Route path="/login" element={<Login />} />
           <Route path="*" element={<Login />} />
-        </Routes>
-      )}
+        </Routes> */}
+      {/* )} */}
     </> // TODO: replace this
   );
 };

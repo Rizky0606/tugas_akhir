@@ -18,6 +18,12 @@ const EditStudent = () => {
     programStudy: "",
   });
   const [loading, setLoading] = useState(true);
+  const [name, setName] = useState("");
+  const [address, setAddress] = useState();
+  const [phoneNumber, setPhoneNumber] = useState();
+  const [date, setDate] = useState();
+  const [gender, setGender] = useState("Male");
+  const [prody, setPrody] = useState("Ekonomi");
   // let faculty = "";
 
   // if (prody === "Ekonomi" || prody === "Manajemen" || prody === "Akuntansi") {
@@ -94,7 +100,6 @@ const EditStudent = () => {
       body: JSON.stringify(data),
     })
       .then(() => {
-        setLoading(false);
         navigate("/student");
       })
       .catch((err) => {

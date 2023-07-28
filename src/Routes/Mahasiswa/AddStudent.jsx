@@ -51,13 +51,6 @@ const AddStudent = () => {
       body: JSON.stringify(student),
     })
       .then(() => {
-        setName("");
-        setProfile("");
-        setAddress("");
-        setPhoneNumber("");
-        setDate("");
-        setGender("");
-        setPrody("");
         navigate("/student");
       })
       .catch((err) => {

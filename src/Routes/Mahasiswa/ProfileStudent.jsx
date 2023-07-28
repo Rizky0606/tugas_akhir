@@ -11,6 +11,7 @@ import {
   Tr,
   Th,
   Td,
+  Box,
 } from "@chakra-ui/react";
 
 const ProfileStudent = () => {
@@ -52,14 +53,21 @@ const ProfileStudent = () => {
       ) : (
         <>
           <Navbar />
-          <h1>Nama : {data.fullname}</h1>
-          <h1>Address : {data.address}</h1>
-          <h1>Birth Date : {data.birthDate}</h1>
-          <h1>Gender : {data.gender}</h1>
-          <h1>Phone Number : {data.phoneNumber}</h1>
-          <h1>Faculty : {data.faculty}</h1>
-          <h1>Program Study : {data.programStudy}</h1>
-          <br />
+          <Box
+            display="flex"
+            flexDirection="column"
+            justifyContent="space-between"
+            ml="30px"
+          >
+            <Text>Nama : {data.fullname}</Text>
+            <Text>Address : {data.address}</Text>
+            <Text>Birth Date : {data.birthDate}</Text>
+            <Text>Gender : {data.gender}</Text>
+            <Text>Phone Number : {data.phoneNumber}</Text>
+            <Text>Faculty : {data.faculty}</Text>
+            <Text>Program Study : {data.programStudy}</Text>
+            <br />
+          </Box>
 
           <Text m="20px 0 20px 20px">Semester 1</Text>
           <Table border={1}>
