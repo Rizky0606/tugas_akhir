@@ -53,12 +53,13 @@ const ProfileStudent = () => {
       ) : (
         <>
           <Navbar />
-          <Box
+          {/* <Box
             display="flex"
             flexDirection="column"
             justifyContent="space-between"
             ml="30px"
           >
+            
             <Text>Nama : {data.fullname}</Text>
             <Text>Address : {data.address}</Text>
             <Text>Birth Date : {data.birthDate}</Text>
@@ -67,10 +68,42 @@ const ProfileStudent = () => {
             <Text>Faculty : {data.faculty}</Text>
             <Text>Program Study : {data.programStudy}</Text>
             <br />
-          </Box>
+          </Box> */}
+          <Table>
+            <Thead>
+              <Tr>
+                <Td>Nama</Td>
+                <Td>{data.fullname}</Td>
+              </Tr>
+              <Tr>
+                <Td>Address</Td>
+                <Td>{data.address}</Td>
+              </Tr>
+              <Tr>
+                <Td>Birth Date</Td>
+                <Td>{data.birthDate}</Td>
+              </Tr>
+              <Tr>
+                <Td>Gender</Td>
+                <Td>{data.gender}</Td>
+              </Tr>
+              <Tr>
+                <Td>Phone Number</Td>
+                <Td>{data.phoneNumber}</Td>
+              </Tr>
+              <Tr>
+                <Td>Faculty</Td>
+                <Td>{data.faculty}</Td>
+              </Tr>
+              <Tr>
+                <Td>Program Study</Td>
+                <Td>{data.programStudy}</Td>
+              </Tr>
+            </Thead>
+          </Table>
 
           <Text m="20px 0 20px 20px">Semester 1</Text>
-          <Table border={1}>
+          <Table>
             <Thead>
               <Tr>
                 <Th>Mata Kuliah</Th>
