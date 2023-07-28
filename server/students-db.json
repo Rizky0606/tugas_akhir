@@ -1,0 +1,1276 @@
+{
+  "student": [
+    {
+      "id": 1,
+      "fullname": "Djarot Purnomo",
+      "profilePicture": "https://randomuser.me/api/portraits/men/2.jpg",
+      "address": "Bogor, Indonesia",
+      "birthDate": "1995-03-15",
+      "gender": "Male",
+      "phoneNumber": "+6280987654321",
+      "faculty": "Fakultas Ilmu Sosial dan Politik",
+      "programStudy": "Administrasi Bisnis",
+      "nilai": [
+        {
+          "semester1": [
+            {
+              "bahasaInggris": "80",
+              "agama": "85",
+              "bahasaIndonesia": "87",
+              "pancasila": "75",
+              "matematika": "78"
+            }
+          ],
+          "semester2": [
+            {
+              "bahasaInggris": "78",
+              "agama": "75",
+              "bahasaIndonesia": "85",
+              "pancasila": "88",
+              "matematika": "85"
+            }
+          ],
+          "semester3": [
+            {
+              "bahasaInggris": "85",
+              "agama": "80",
+              "bahasaIndonesia": "85",
+              "pancasila": "88",
+              "matematika": "75"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "fullname": "Anshori Atmodiredjo",
+      "profilePicture": "https://randomuser.me/api/portraits/men/47.jpg",
+      "address": "Bandung, Indonesia",
+      "birthDate": "1993-08-21",
+      "gender": "Male",
+      "phoneNumber": "+6289876543210",
+      "faculty": "Fakultas Teknologi Informasi dan Sains",
+      "programStudy": "Matematika",
+      "nilai": [
+        {
+          "semester1": [
+            {
+              "bahasaInggris": "75",
+              "agama": "80",
+              "bahasaIndonesia": "85",
+              "pancasila": "75",
+              "matematika": "88"
+            }
+          ],
+          "semester2": [
+            {
+              "bahasaInggris": "78",
+              "agama": "80",
+              "bahasaIndonesia": "75",
+              "pancasila": "80",
+              "matematika": "80"
+            }
+          ],
+          "semester3": [
+            {
+              "bahasaInggris": "88",
+              "agama": "75",
+              "bahasaIndonesia": "80",
+              "pancasila": "80",
+              "matematika": "85"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "fullname": "Michael Johnson",
+      "profilePicture": "https://randomuser.me/api/portraits/men/3.jpg",
+      "address": "Surabaya, Indonesia",
+      "birthDate": "1998-05-07",
+      "gender": "Male",
+      "phoneNumber": "+6285555555555",
+      "faculty": "Fakultas Ekonomi",
+      "programStudy": "Ekonomi",
+      "nilai": [
+        {
+          "semester1": [
+            {
+              "bahasaInggris": "78",
+              "agama": "80",
+              "bahasaIndonesia": "87",
+              "pancasila": "88",
+              "matematika": "85"
+            }
+          ],
+          "semester2": [
+            {
+              "bahasaInggris": "70",
+              "agama": "85",
+              "bahasaIndonesia": "88",
+              "pancasila": "90",
+              "matematika": "85"
+            }
+          ],
+          "semester3": [
+            {
+              "bahasaInggris": "80",
+              "agama": "75",
+              "bahasaIndonesia": "80",
+              "pancasila": "85",
+              "matematika": "83"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "fullname": "Sarah Tan",
+      "profilePicture": "https://randomuser.me/api/portraits/women/4.jpg",
+      "address": "Yogyakarta, Indonesia",
+      "birthDate": "1994-11-12",
+      "gender": "Female",
+      "phoneNumber": "+6289999999999",
+      "faculty": "Fakultas Ilmu Sosial dan Politik",
+      "programStudy": "Administrasi Publik",
+      "nilai": [
+        {
+          "semester1": [
+            {
+              "bahasaInggris": "83",
+              "agama": "78",
+              "bahasaIndonesia": "83",
+              "pancasila": "80",
+              "matematika": "78"
+            }
+          ],
+          "semester2": [
+            {
+              "bahasaInggris": "75",
+              "agama": "85",
+              "bahasaIndonesia": "80",
+              "pancasila": "75",
+              "matematika": "80"
+            }
+          ],
+          "semester3": [
+            {
+              "bahasaInggris": "80",
+              "agama": "80",
+              "bahasaIndonesia": "85",
+              "pancasila": "80",
+              "matematika": "85"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "fullname": "Ahmad Abdullah",
+      "profilePicture": "https://randomuser.me/api/portraits/men/5.jpg",
+      "address": "Medan, Indonesia",
+      "birthDate": "1997-06-28",
+      "gender": "Male",
+      "phoneNumber": "+6287777777777",
+      "faculty": "Fakultas Teknik",
+      "programStudy": "Teknik Sipil",
+      "nilai": [
+        {
+          "semester1": [
+            {
+              "bahasaInggris": "87",
+              "agama": "83",
+              "bahasaIndonesia": "75",
+              "pancasila": "80",
+              "matematika": "85"
+            }
+          ],
+          "semester2": [
+            {
+              "bahasaInggris": "85",
+              "agama": "78",
+              "bahasaIndonesia": "80",
+              "pancasila": "75",
+              "matematika": "85"
+            }
+          ],
+          "semester3": [
+            {
+              "bahasaInggris": "88",
+              "agama": "85",
+              "bahasaIndonesia": "80",
+              "pancasila": "70",
+              "matematika": "78"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "fullname": "Lisa Wong",
+      "profilePicture": "https://randomuser.me/api/portraits/women/6.jpg",
+      "address": "Surabaya, Indonesia",
+      "birthDate": "1996-09-02",
+      "gender": "Female",
+      "phoneNumber": "+6281111111111",
+      "faculty": "Fakultas Teknologi Informasi dan Sains",
+      "programStudy": "Informatika",
+      "nilai": [
+        {
+          "semester1": [
+            {
+              "bahasaInggris": "85",
+              "agama": "90",
+              "bahasaIndonesia": "80",
+              "pancasila": "83",
+              "matematika": "85"
+            }
+          ],
+          "semester2": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "75"
+            }
+          ],
+          "semester3": [
+            {
+              "bahasaInggris": "88",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "85",
+              "matematika": "80"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "fullname": "David Lee",
+      "profilePicture": "https://randomuser.me/api/portraits/men/7.jpg",
+      "address": "Jakarta, Indonesia",
+      "birthDate": "1995-07-17",
+      "gender": "Male",
+      "phoneNumber": "+6282222222222",
+      "faculty": "Fakultas Teknologi Informasi dan Sains",
+      "programStudy": "Fisika",
+      "nilai": [
+        {
+          "semester1": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ],
+          "semester2": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ],
+          "semester3": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "fullname": "Siti Indah",
+      "profilePicture": "https://randomuser.me/api/portraits/women/8.jpg",
+      "address": "Bandung, Indonesia",
+      "birthDate": "1992-12-25",
+      "gender": "Female",
+      "phoneNumber": "+6283333333333",
+      "faculty": "Fakultas Teknologi Informasi dan Sains",
+      "programStudy": "Informatika",
+      "nilai": [
+        {
+          "semester1": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ],
+          "semester2": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ],
+          "semester3": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "fullname": "Budi Santoso",
+      "profilePicture": "https://randomuser.me/api/portraits/men/9.jpg",
+      "address": "Yogyakarta, Indonesia",
+      "birthDate": "1994-04-09",
+      "gender": "Male",
+      "phoneNumber": "+6284444444444",
+      "faculty": "Fakultas Ekonomi",
+      "programStudy": "Manajemen",
+      "nilai": [
+        {
+          "semester1": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ],
+          "semester2": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ],
+          "semester3": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "fullname": "Rina Amalia",
+      "profilePicture": "https://randomuser.me/api/portraits/women/10.jpg",
+      "address": "Medan, Indonesia",
+      "birthDate": "1997-11-30",
+      "gender": "Female",
+      "phoneNumber": "+6286666666666",
+      "faculty": "Fakultas Ilmu Sosial dan Politik",
+      "programStudy": "Hubungan Internasional",
+      "nilai": [
+        {
+          "semester1": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ],
+          "semester2": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ],
+          "semester3": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "fullname": "Andre Wijaya",
+      "profilePicture": "https://randomuser.me/api/portraits/men/11.jpg",
+      "address": "Surabaya, Indonesia",
+      "birthDate": "1998-02-18",
+      "gender": "Male",
+      "phoneNumber": "+6287777777777",
+      "faculty": "Fakultas Teknik",
+      "programStudy": "Arsitektur",
+      "nilai": [
+        {
+          "semester1": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ],
+          "semester2": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ],
+          "semester3": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "fullname": "Dewi Susanti",
+      "profilePicture": "https://randomuser.me/api/portraits/women/12.jpg",
+      "address": "Jakarta, Indonesia",
+      "birthDate": "1995-06-13",
+      "gender": "Female",
+      "phoneNumber": "+6288888888888",
+      "faculty": "Fakultas Teknologi Informasi dan Sains",
+      "programStudy": "Informatika",
+      "nilai": [
+        {
+          "semester1": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ],
+          "semester2": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ],
+          "semester3": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "fullname": "Rudi Setiawan",
+      "profilePicture": "https://randomuser.me/api/portraits/men/13.jpg",
+      "address": "Bandung, Indonesia",
+      "birthDate": "1993-03-09",
+      "gender": "Male",
+      "phoneNumber": "+6289999999999",
+      "faculty": "Fakultas Teknologi Informasi dan Sains",
+      "programStudy": "Fisika",
+      "nilai": [
+        {
+          "semester1": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ],
+          "semester2": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ],
+          "semester3": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "fullname": "Lina Hartati",
+      "profilePicture": "https://randomuser.me/api/portraits/women/14.jpg",
+      "address": "Yogyakarta, Indonesia",
+      "birthDate": "1994-08-05",
+      "gender": "Female",
+      "phoneNumber": "+6281010101010",
+      "faculty": "Fakultas Ekonomi",
+      "programStudy": "Akuntansi",
+      "nilai": [
+        {
+          "semester1": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ],
+          "semester2": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ],
+          "semester3": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "fullname": "Hendro Wijaya",
+      "profilePicture": "https://randomuser.me/api/portraits/men/15.jpg",
+      "address": "Medan, Indonesia",
+      "birthDate": "1997-01-22",
+      "gender": "Male",
+      "phoneNumber": "+6281212121212",
+      "faculty": "Fakultas Ilmu Sosial dan Politik",
+      "programStudy": "Administrasi Bisnis",
+      "nilai": [
+        {
+          "semester1": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ],
+          "semester2": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ],
+          "semester3": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "fullname": "Yulia Cahyani",
+      "profilePicture": "https://randomuser.me/api/portraits/women/16.jpg",
+      "address": "Surabaya, Indonesia",
+      "birthDate": "1996-04-17",
+      "gender": "Female",
+      "phoneNumber": "+6281313131313",
+      "faculty": "Fakultas Teknik",
+      "programStudy": "Teknik Sipil",
+      "nilai": [
+        {
+          "semester1": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ],
+          "semester2": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ],
+          "semester3": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "fullname": "Tono Saputra",
+      "profilePicture": "https://randomuser.me/api/portraits/men/17.jpg",
+      "address": "Jakarta, Indonesia",
+      "birthDate": "1995-10-11",
+      "gender": "Male",
+      "phoneNumber": "+6281414141414",
+      "faculty": "Fakultas Teknologi Informasi dan Sains",
+      "programStudy": "Informatika",
+      "nilai": [
+        {
+          "semester1": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ],
+          "semester2": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ],
+          "semester3": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "fullname": "Nina Wahyuni",
+      "profilePicture": "https://randomuser.me/api/portraits/women/18.jpg",
+      "address": "Bandung, Indonesia",
+      "birthDate": "1993-05-27",
+      "gender": "Female",
+      "phoneNumber": "+6281515151515",
+      "faculty": "Fakultas Teknologi Informasi dan Sains",
+      "programStudy": "Matematika",
+      "nilai": [
+        {
+          "semester1": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ],
+          "semester2": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ],
+          "semester3": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "fullname": "Arief Kurniawan",
+      "profilePicture": "https://randomuser.me/api/portraits/men/19.jpg",
+      "address": "Yogyakarta, Indonesia",
+      "birthDate": "1994-12-03",
+      "gender": "Male",
+      "phoneNumber": "+6281616161616",
+      "faculty": "Fakultas Ekonomi",
+      "programStudy": "Manajemen",
+      "nilai": [
+        {
+          "semester1": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ],
+          "semester2": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ],
+          "semester3": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "fullname": "Rika Setyawati",
+      "profilePicture": "https://randomuser.me/api/portraits/women/20.jpg",
+      "address": "Medan, Indonesia",
+      "birthDate": "1997-07-20",
+      "gender": "Female",
+      "phoneNumber": "+6281717171717",
+      "faculty": "Fakultas Ilmu Sosial dan Politik",
+      "programStudy": "Administrasi Publik",
+      "nilai": [
+        {
+          "semester1": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ],
+          "semester2": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ],
+          "semester3": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "fullname": "Eko Prasetyo",
+      "profilePicture": "https://randomuser.me/api/portraits/men/21.jpg",
+      "address": "Surabaya, Indonesia",
+      "birthDate": "1998-10-16",
+      "gender": "Male",
+      "phoneNumber": "+6281818181818",
+      "faculty": "Fakultas Teknik",
+      "programStudy": "Teknik Sipil",
+      "nilai": [
+        {
+          "semester1": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ],
+          "semester2": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ],
+          "semester3": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "fullname": "Rina Susanti",
+      "profilePicture": "https://randomuser.me/api/portraits/women/22.jpg",
+      "address": "Jakarta, Indonesia",
+      "birthDate": "1995-02-11",
+      "gender": "Female",
+      "phoneNumber": "+6281919191919",
+      "faculty": "Fakultas Teknologi Informasi dan Sains",
+      "programStudy": "Informatika",
+      "nilai": [
+        {
+          "semester1": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ],
+          "semester2": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ],
+          "semester3": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "fullname": "Budi Setiawan",
+      "profilePicture": "https://randomuser.me/api/portraits/men/23.jpg",
+      "address": "Bandung, Indonesia",
+      "birthDate": "1993-09-06",
+      "gender": "Male",
+      "phoneNumber": "+6282020202020",
+      "faculty": "Fakultas Teknologi Informasi dan Sains",
+      "programStudy": "Fisika",
+      "nilai": [
+        {
+          "semester1": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ],
+          "semester2": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ],
+          "semester3": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 24,
+      "fullname": "Sari Rahmawati",
+      "profilePicture": "https://randomuser.me/api/portraits/women/24.jpg",
+      "address": "Yogyakarta, Indonesia",
+      "birthDate": "1994-04-02",
+      "gender": "Female",
+      "phoneNumber": "+6282121212121",
+      "faculty": "Fakultas Ekonomi",
+      "programStudy": "Akuntansi",
+      "nilai": [
+        {
+          "semester1": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ],
+          "semester2": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ],
+          "semester3": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 25,
+      "fullname": "Eko Setiawan",
+      "profilePicture": "https://randomuser.me/api/portraits/men/25.jpg",
+      "address": "Medan, Indonesia",
+      "birthDate": "1997-11-27",
+      "gender": "Male",
+      "phoneNumber": "+6282222222222",
+      "faculty": "Fakultas Ilmu Sosial dan Politik",
+      "programStudy": "Administrasi Bisnis",
+      "nilai": [
+        {
+          "semester1": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ],
+          "semester2": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ],
+          "semester3": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "fullname": "Rini Hartati",
+      "profilePicture": "https://randomuser.me/api/portraits/women/26.jpg",
+      "address": "Surabaya, Indonesia",
+      "birthDate": "1996-02-21",
+      "gender": "Female",
+      "phoneNumber": "+6282323232323",
+      "faculty": "Fakultas Teknik",
+      "programStudy": "Arsitektur",
+      "nilai": [
+        {
+          "semester1": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ],
+          "semester2": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ],
+          "semester3": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 27,
+      "fullname": "Andi Wijaya",
+      "profilePicture": "https://randomuser.me/api/portraits/men/27.jpg",
+      "address": "Jakarta, Indonesia",
+      "birthDate": "1995-08-17",
+      "gender": "Male",
+      "phoneNumber": "+6282424242424",
+      "faculty": "Fakultas Teknologi Informasi dan Sains",
+      "programStudy": "Informatika",
+      "nilai": [
+        {
+          "semester1": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ],
+          "semester2": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ],
+          "semester3": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 28,
+      "fullname": "Tina Cahaya",
+      "profilePicture": "https://randomuser.me/api/portraits/women/28.jpg",
+      "address": "Bandung, Indonesia",
+      "birthDate": "1993-03-14",
+      "gender": "Female",
+      "phoneNumber": "+6282525252525",
+      "faculty": "Fakultas Teknologi Informasi dan Sains",
+      "programStudy": "Matematika",
+      "nilai": [
+        {
+          "semester1": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ],
+          "semester2": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ],
+          "semester3": [
+            {
+              "bahasaInggris": "90",
+              "agama": "85",
+              "bahasaIndonesia": "75",
+              "pancasila": "70",
+              "matematika": "80"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "fullname": "adfasdfasda",
+      "profilePicture": "dfdsfds",
+      "address": "dfdsf",
+      "phoneNumber": "dfsdfsd",
+      "birthDate": "2023-06-27",
+      "gender": "Male",
+      "faculty": "Fakultas Teknologi Informasi dan Sains",
+      "programStudy": "Fisika",
+      "id": 29
+    },
+    {
+      "fullname": "addasd",
+      "profilePicture": "dasdasd",
+      "address": "czxczczfdf",
+      "phoneNumber": "ewfwewe",
+      "birthDate": "2023-07-05",
+      "gender": "Female",
+      "faculty": "Fakultas Teknologi Informasi dan Sains",
+      "programStudy": "Matematika",
+      "id": 30
+    }
+  ],
+  "dosen": [
+    {
+      "fullname": "Mercy Hermawati M.Pd., M.Kom.",
+      "gender": "Female",
+      "profilePicture": "https://randomuser.me/api/portraits/women/30.jpg",
+      "mataKuliah": "Bahasa Inggris",
+      "phoneNumber": "085777776977",
+      "id": 1
+    },
+    {
+      "fullname": "Adhi Susano M.Kom.",
+      "gender": "Male",
+      "profilePicture": "https://randomuser.me/api/portraits/men/40.jpg",
+      "mataKuliah": "Pancasila",
+      "phoneNumber": "0818886081",
+      "id": 2
+    },
+    {
+      "fullname": "Dian Novita M.Pd.",
+      "gender": "Female",
+      "profilePicture": "https://randomuser.me/api/portraits/women/40.jpg",
+      "mataKuliah": "Matematika",
+      "phoneNumber": "08561499804",
+      "id": 3
+    },
+    {
+      "fullname": "Dewi Driyani S.T., M.M., M.Kom.",
+      "gender": "Female",
+      "profilePicture": "https://randomuser.me/api/portraits/women/46.jpg",
+      "mataKuliah": "Bahasa Indonesia",
+      "phoneNumber": "+6285710024835",
+      "id": 4
+    },
+    {
+      "fullname": "Intan Vandini M.Pd.",
+      "gender": "Female",
+      "profilePicture": "https://randomuser.me/api/portraits/women/39.jpg",
+      "mataKuliah": "Agama",
+      "phoneNumber": "085714081323",
+      "id": 5
+    },
+    {
+      "fullname": "Noor Komari Pratiwi M.Pd.",
+      "gender": "Female",
+      "profilePicture": "https://randomuser.me/api/portraits/women/43.jpg",
+      "mataKuliah": "Penulisan Ilmiah",
+      "phoneNumber": "08159914272",
+      "id": 6
+    },
+    {
+      "fullname": "Eddy Saputra M.Pd.I.",
+      "gender": "Male",
+      "profilePicture": "https://randomuser.me/api/portraits/men/37.jpg",
+      "mataKuliah": "Akhlak dan Etika",
+      "phoneNumber": "081399958557",
+      "id": 7
+    },
+    {
+      "fullname": "Dra. Lies Sunarmintyastuti M.M.",
+      "gender": "Female",
+      "profilePicture": "https://randomuser.me/api/portraits/women/37.jpg",
+      "mataKuliah": "Aplikasi Kewirausahaan",
+      "phoneNumber": "0811835594",
+      "id": 8
+    },
+    {
+      "fullname": "dffsdfsd",
+      "profilePicture": "sdfsdfdsf",
+      "phoneNumber": "sdfsdfsdf",
+      "gender": "Female",
+      "mataKuliah": "Bahasa Indonesia",
+      "id": 9
+    }
+  ]
+}
