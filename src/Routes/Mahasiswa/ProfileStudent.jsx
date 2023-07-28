@@ -23,7 +23,7 @@ const ProfileStudent = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`https://6481574829fa1c5c50314a49.mockapi.io/student/${params.id}`)
+    fetch(`http://localhost:3001/student/${params.id}`)
       .then((res) => res.json())
       .then((json) => {
         setData(json);
@@ -35,7 +35,7 @@ const ProfileStudent = () => {
   }, []);
 
   useEffect(() => {
-    fetch(`https://6481574829fa1c5c50314a49.mockapi.io/student/${params.id}`)
+    fetch(`http://localhost:3001/student/${params.id}`)
       .then((res) => res.json())
       .then((json) => {
         setDataNilai(json.nilai);

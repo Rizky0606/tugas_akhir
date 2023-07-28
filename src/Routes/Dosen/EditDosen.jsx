@@ -23,7 +23,7 @@ const EditDosen = () => {
     mataKuliah: mataKuliah,
   };
 
-  fetch(`https://6481574829fa1c5c50314a49.mockapi.io/dosen/${params.id}`)
+  fetch(`http://localhost:3001/dosen/${params.id}`)
     .then((res) => res.json())
     .then((json) => {
       setData(json);
@@ -31,7 +31,7 @@ const EditDosen = () => {
     });
 
   const editData = () => {
-    fetch(`https://6481574829fa1c5c50314a49.mockapi.io/dosen/${params.id}`, {
+    fetch(`http://localhost:3001/dosen/${params.id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

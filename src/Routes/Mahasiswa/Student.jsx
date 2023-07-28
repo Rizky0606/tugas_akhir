@@ -15,7 +15,7 @@ import {
   Button,
 } from "@chakra-ui/react";
 
-const Student = ({ user }) => {
+const Student = () => {
   // TODO: answer here
   const [data, setData] = useState();
   const [loading, setLoading] = useState(true);
@@ -24,9 +24,7 @@ const Student = ({ user }) => {
   const navigate = useNavigate();
 
   const loadPage = async () => {
-    const response = await fetch(
-      "https://6481574829fa1c5c50314a49.mockapi.io/student"
-    );
+    const response = await fetch(" http://localhost:3001/student");
     const json = await response.json();
     setData(json);
     setLoading(false);
@@ -37,7 +35,7 @@ const Student = ({ user }) => {
   }, []);
 
   const handleCLickDeleteButton = (id) => {
-    fetch(`https://6481574829fa1c5c50314a49.mockapi.io/student/${id}`, {
+    fetch(` http://localhost:3001/student/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -120,9 +118,7 @@ const Student = ({ user }) => {
                             className="delete-btn"
                             data-testid={`delete-${datas.id}`}
                             onClick={() => {
-                              user
-                                ? handleCLickDeleteButton(datas.id)
-                                : navigate("/login");
+                              handleCLickDeleteButton(datas.id);
                             }}
                           >
                             Delete

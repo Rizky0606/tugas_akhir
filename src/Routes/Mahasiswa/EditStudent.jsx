@@ -83,7 +83,7 @@ const EditStudent = () => {
   };
 
   useEffect(() => {
-    fetch(`https://6481574829fa1c5c50314a49.mockapi.io/student/${params.id}`)
+    fetch(`http://localhost:3001/student/${params.id}`)
       .then((res) => res.json())
       .then((json) => {
         setData(json);
@@ -91,8 +91,9 @@ const EditStudent = () => {
       });
   }, []);
 
-  const editData = () => {
-    fetch(`https://6481574829fa1c5c50314a49.mockapi.io/student/${params.id}`, {
+  const editData = (e) => {
+    e.preventDefault();
+    fetch(`http://localhost:3001/student/${params.id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -100,6 +101,7 @@ const EditStudent = () => {
       body: JSON.stringify(data),
     })
       .then(() => {
+        setLoading(false);
         navigate("/student");
       })
       .catch((err) => {

@@ -43,7 +43,7 @@ const AddStudent = () => {
   };
   const addStudent = (e) => {
     e.preventDefault();
-    fetch("https://6481574829fa1c5c50314a49.mockapi.io/student", {
+    fetch("http://localhost:3001/student", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
