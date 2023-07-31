@@ -1,9 +1,12 @@
 // TODO: answer here
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Button, Input, Select } from "@chakra-ui/react";
+import { Button, Input, Select, Text } from "@chakra-ui/react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import { set, ref } from "firebase/database";
+import { db } from "../../firebase";
+import { uid } from "uid";
 
 const AddStudent = () => {
   // TODO: answer here
@@ -12,9 +15,11 @@ const AddStudent = () => {
   const [address, setAddress] = useState();
   const [phoneNumber, setPhoneNumber] = useState();
   const [date, setDate] = useState();
-  const [gender, setGender] = useState("Male");
+  const [gender, setGender] = useState("Laki - Laki");
   const [prody, setPrody] = useState("Ekonomi");
   const navigate = useNavigate();
+
+  const uuid = uid();
 
   let faculty = "";
   if (prody === "Ekonomi" || prody === "Manajemen" || prody === "Akuntansi") {
@@ -32,6 +37,7 @@ const AddStudent = () => {
   }
 
   let student = {
+    id: uuid,
     fullname: name,
     profilePicture: profile,
     address: address,
@@ -43,29 +49,33 @@ const AddStudent = () => {
   };
   const addStudent = (e) => {
     e.preventDefault();
-    fetch("http://localhost:3001/student", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(student),
-    })
-      .then(() => {
-        navigate("/student");
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    // fetch("http://localhost:3001/student", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify(student),
+    // })
+    //   .then(() => {
+    //     navigate("/student");
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //   });
+    set(ref(db, `/student/${uuid}`), student);
+    navigate("/student");
   };
 
   return (
     <>
       {/* TODO: answer here */}
       <Navbar />
-      <h1>Add Student</h1>
+      <Text fontWeight={700} fontSize="20px" ml="30px">
+        Tambah Mahasiswa
+      </Text>
       <form action="" id="form-student">
         <label>
-          Fullname
+          Nama Lengkap
           <Input
             type="text"
             data-testid="name"
@@ -74,7 +84,7 @@ const AddStudent = () => {
           />
         </label>
         <label>
-          Profile Picture
+          Foto Profil
           <Input
             type="text"
             data-testid="profilePicture"
@@ -83,7 +93,7 @@ const AddStudent = () => {
           />
         </label>
         <label>
-          Address
+          Alamat
           <Input
             type="text"
             data-testid="address"
@@ -92,7 +102,7 @@ const AddStudent = () => {
           />
         </label>
         <label>
-          Phone Number
+          Nomor Telepon
           <Input
             type="text"
             data-testid="phoneNumber"
@@ -101,7 +111,7 @@ const AddStudent = () => {
           />
         </label>
         <label>
-          Birth Date
+          Tanggal Lahir
           <Input
             type="date"
             data-testid="date"
@@ -112,21 +122,21 @@ const AddStudent = () => {
         </label>
 
         <label>
-          Gender
+          Jenis Kelamin
           <Select
             id="input-gender"
             data-testid="gender"
             onChange={(e) => setGender(e.target.value)}
             required
           >
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
+            <option value="Laki - Laki">Laki - Laki</option>
+            <option value="Perempuan">Perempuan</option>
           </Select>
           <br />
         </label>
 
         <label>
-          Program Study
+          Program Studi
           <Select
             id="input-prody"
             data-testid="prody"

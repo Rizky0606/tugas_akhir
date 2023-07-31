@@ -13,7 +13,10 @@ import {
   Td,
   TableContainer,
   Button,
+  Text,
 } from "@chakra-ui/react";
+import { db } from "../../firebase";
+import { ref, onValue, remove } from "firebase/database";
 
 const Dosen = () => {
   // TODO: answer here
@@ -23,10 +26,21 @@ const Dosen = () => {
   const navigate = useNavigate();
 
   const loadPage = async () => {
-    const response = await fetch("http://localhost:3001/dosen");
-    const json = await response.json();
-    setData(json);
-    setLoading(false);
+    // const response = await fetch("http://localhost:3001/dosen");
+    // const json = await response.json();
+    // setData(json);
+    // setLoading(false);
+
+    onValue(ref(db, "/dosen"), (snapshot) => {
+      setData([]);
+      const data = snapshot.val();
+      if (data !== null) {
+        Object.values(data).map((datas) => {
+          setData((oldArray) => [...oldArray, datas]);
+          setLoading(false);
+        });
+      }
+    });
   };
 
   useEffect(() => {
@@ -34,27 +48,29 @@ const Dosen = () => {
   }, []);
 
   const handleCLickDeleteButton = (id) => {
-    fetch(`http://localhost:3001/dosen/${id}`, {
-      method: "DELETE",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then(() => {
-        loadPage();
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    // fetch(`http://localhost:3001/dosen/${id}`, {
+    //   method: "DELETE",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    // })
+    //   .then(() => {
+    //     loadPage();
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //   });
+
+    remove(ref(db, `/dosen/${id}`));
   };
 
   return (
     <>
       {/* TODO: answer here */}
       <Navbar />
-      <div>
-        <h2>All Dosen</h2>
-      </div>
+      <Text fontWeight={700} fontSize="20px" ml="30px">
+        Dosen
+      </Text>
       {loading ? (
         <p>Loading ...</p>
       ) : (
@@ -63,19 +79,21 @@ const Dosen = () => {
             <Thead>
               <Tr>
                 <Th>No</Th>
-                <Th>Full Name</Th>
+                <Th>Nama Lengkap</Th>
                 <Th>Mata Kuliah</Th>
-                <Th>Phone Number</Th>
-                <Th>Option</Th>
+                <Th>Nomor Telepon</Th>
+                <Th>Aksi</Th>
               </Tr>
             </Thead>
             <Tbody>
-              {data.map((datas) => {
+              {data.map((datas, index) => {
                 return (
-                  <Tr key={datas.id} className="student-data-row">
-                    <Td>{datas.id}</Td>
+                  <Tr key={index} className="student-data-row">
+                    <Td>{index + 1}</Td>
                     <Td>
-                      <Link to={`/dosen/${datas.id}`}>{datas.fullname}</Link>
+                      <Link to={`/dosen/profile/${datas.id}`}>
+                        {datas.fullname}
+                      </Link>
                     </Td>
                     <Td>{datas.mataKuliah}</Td>
                     <Td>{datas.phoneNumber}</Td>
@@ -89,7 +107,7 @@ const Dosen = () => {
                           handleCLickDeleteButton(datas.id);
                         }}
                       >
-                        Delete
+                        Hapus
                       </Button>
                     </Td>
                   </Tr>

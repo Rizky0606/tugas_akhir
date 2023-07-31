@@ -1,20 +1,26 @@
 // TODO: answer here
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Button, Input, Select } from "@chakra-ui/react";
+import { Button, Input, Select, Text } from "@chakra-ui/react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import { set, ref } from "firebase/database";
+import { db } from "../../firebase";
+import { uid } from "uid";
 
 const AddDosen = () => {
   // TODO: answer here
   const [name, setName] = useState("");
   const [profile, setProfile] = useState();
   const [phoneNumber, setPhoneNumber] = useState();
-  const [gender, setGender] = useState("Male");
+  const [gender, setGender] = useState("Laki -Laki");
   const [mataKuliah, setMataKuliah] = useState("Bahasa Inggris");
   const navigate = useNavigate();
 
+  const uuid = uid();
+
   let dosen = {
+    id: uuid,
     fullname: name,
     profilePicture: profile,
     phoneNumber: phoneNumber,
@@ -23,29 +29,34 @@ const AddDosen = () => {
   };
   const addDosen = (e) => {
     e.preventDefault();
-    fetch("https://6481574829fa1c5c50314a49.mockapi.io/dosen", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(dosen),
-    })
-      .then(() => {
-        navigate("/dosen");
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    // fetch("https://6481574829fa1c5c50314a49.mockapi.io/dosen", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify(dosen),
+    // })
+    //   .then(() => {
+    //     navigate("/dosen");
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //   });
+
+    set(ref(db, `/dosen/${uuid}`), dosen);
+    navigate("/dosen");
   };
 
   return (
     <>
       {/* TODO: answer here */}
       <Navbar />
-      <h1>Add Dosen</h1>
+      <Text fontWeight={700} fontSize="20px" ml="30px">
+        Tambah Dosen
+      </Text>
       <form action="" id="form-student">
         <label>
-          Fullname
+          Nama Lengkap
           <Input
             type="text"
             data-testid="name"
@@ -54,7 +65,7 @@ const AddDosen = () => {
           />
         </label>
         <label>
-          Profile Picture
+          Foto Profil
           <Input
             type="text"
             data-testid="profilePicture"
@@ -64,7 +75,7 @@ const AddDosen = () => {
         </label>
 
         <label>
-          Phone Number
+          Nomor Telepon
           <Input
             type="text"
             data-testid="phoneNumber"
@@ -74,15 +85,15 @@ const AddDosen = () => {
         </label>
 
         <label>
-          Gender
+          Jenis Kelamin
           <Select
             id="input-gender"
             data-testid="gender"
             onChange={(e) => setGender(e.target.value)}
             required
           >
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
+            <option value="Laki - Laki">Laki - Laki</option>
+            <option value="Perempuan">Perempuan</option>
           </Select>
           <br />
         </label>
@@ -114,7 +125,7 @@ const AddDosen = () => {
           id="add-btn"
           onClick={addDosen}
         >
-          Add Dosen
+          Tambah Dosen
         </Button>
       </form>
       <Footer />

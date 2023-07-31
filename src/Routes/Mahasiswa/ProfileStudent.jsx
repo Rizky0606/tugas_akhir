@@ -13,47 +13,41 @@ import {
   Td,
   Box,
 } from "@chakra-ui/react";
+import { db } from "../../firebase";
+import { ref, onValue } from "firebase/database";
 
 const ProfileStudent = () => {
-  const [data, setData] = useState();
+  const [data, setData] = useState([]);
   const [dataNilai, setDataNilai] = useState();
   const [loading, setLoading] = useState(true);
-  const [filterData, setFilterData] = useState("semester1");
+  // const [filterData, setFilterData] = useState("semester1");
   const params = useParams();
   const navigate = useNavigate();
 
-  useEffect(() => {
-    fetch(`http://localhost:3001/student/${params.id}`)
-      .then((res) => res.json())
-      .then((json) => {
-        setData(json);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch(`http://localhost:3001/student/${params.id}`)
+  //     .then((res) => res.json())
+  //     .then((json) => {
+  //       setData(json);
+  //       setLoading(false);
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  // }, []);
 
   useEffect(() => {
-    fetch(`http://localhost:3001/student/${params.id}`)
-      .then((res) => res.json())
-      .then((json) => {
-        setDataNilai(json.nilai);
-        setLoading(false);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    onValue(ref(db, `/student/${params.id}`), (snapshot) => {
+      const data = snapshot.val();
+      setData(data);
+      setLoading(false);
+    });
   }, []);
 
   return (
     <>
-      {loading ? (
-        <h1>Loading</h1>
-      ) : (
-        <>
-          <Navbar />
-          {/* <Box
+      <Navbar />
+      {/* <Box
             display="flex"
             flexDirection="column"
             justifyContent="space-between"
@@ -69,40 +63,52 @@ const ProfileStudent = () => {
             <Text>Program Study : {data.programStudy}</Text>
             <br />
           </Box> */}
+      {loading ? (
+        <h1>Loading</h1>
+      ) : (
+        <>
+          <Text fontWeight={700} fontSize="20px" ml="30px">
+            Profile Mahasiswa
+          </Text>
+          <img
+            style={{ borderRadius: "50%", boxSize: "150px", margin: "auto" }}
+            src={data.profilePicture}
+            alt={data.fullname}
+          />
           <Table>
             <Thead>
               <Tr>
-                <Td>Nama</Td>
+                <Td>Nama Lengkap</Td>
                 <Td>{data.fullname}</Td>
               </Tr>
               <Tr>
-                <Td>Address</Td>
+                <Td>Alamat</Td>
                 <Td>{data.address}</Td>
               </Tr>
               <Tr>
-                <Td>Birth Date</Td>
+                <Td>Tanggal Lahir</Td>
                 <Td>{data.birthDate}</Td>
               </Tr>
               <Tr>
-                <Td>Gender</Td>
+                <Td>Jenis Kelamin</Td>
                 <Td>{data.gender}</Td>
               </Tr>
               <Tr>
-                <Td>Phone Number</Td>
+                <Td>Nomor Telepon</Td>
                 <Td>{data.phoneNumber}</Td>
               </Tr>
               <Tr>
-                <Td>Faculty</Td>
+                <Td>Fakultas</Td>
                 <Td>{data.faculty}</Td>
               </Tr>
               <Tr>
-                <Td>Program Study</Td>
+                <Td>Program Studi</Td>
                 <Td>{data.programStudy}</Td>
               </Tr>
             </Thead>
           </Table>
 
-          <Text m="20px 0 20px 20px">Semester 1</Text>
+          {/* <Text m="20px 0 20px 20px">Semester 1</Text>
           <Table>
             <Thead>
               <Tr>
@@ -214,7 +220,7 @@ const ProfileStudent = () => {
                 );
               })}
             </Tbody>
-          </Table>
+          </Table> */}
 
           <Button
             colorScheme="blue"

@@ -2,14 +2,14 @@
   "student": [
     {
       "id": 1,
-      "fullname": "Djarot Purnomo10",
+      "fullname": "Djarot Purnomo",
       "profilePicture": "https://randomuser.me/api/portraits/men/2.jpg",
       "address": "Bogor, Indonesia",
       "birthDate": "1995-03-15",
       "gender": "Male",
       "phoneNumber": "+6280987654321",
       "faculty": "Fakultas Ilmu Sosial dan Politik",
-      "programStudy": "Administrasi Bisnis",
+      "programStudy": "Ekonomi",
       "nilai": [
         {
           "semester1": [
@@ -1186,17 +1186,6 @@
       "faculty": "Fakultas Teknologi Informasi dan Sains",
       "programStudy": "Fisika",
       "id": 29
-    },
-    {
-      "fullname": "addasd",
-      "profilePicture": "dasdasd",
-      "address": "czxczczfdf",
-      "phoneNumber": "ewfwewe",
-      "birthDate": "2023-07-05",
-      "gender": "Female",
-      "faculty": "Fakultas Teknologi Informasi dan Sains",
-      "programStudy": "Matematika",
-      "id": 30
     }
   ],
   "dosen": [

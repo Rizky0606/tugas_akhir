@@ -29,17 +29,17 @@ const Navbar = () => {
     // TODO: answer here
     <div className="navbar">
       <Link to="/">
-        <h1 data-testid="home-page">Student Portal</h1>
+        <h1 data-testid="home-page">Home</h1>
       </Link>
       <Link to="/student" data-testid="student-page">
-        All Student
+        Mahasiswa
       </Link>
-      <Link to="/dosen">All Dosen</Link>
+      <Link to="/dosen">Dosen</Link>
       <Link to="/student/add" data-testid="add-page">
-        Add Student
+        Tambah Mahasiwa
       </Link>
       <Link to="/dosen/add" data-testid="add-page">
-        Add Dosen
+        Tambah Dosen
       </Link>
       {user ? (
         <>
@@ -49,11 +49,11 @@ const Navbar = () => {
             alt={user.displayName}
             style={{ borderRadius: "50%", height: "40px", width: "40px" }}
           />
-          <Button onClick={handleLogout}>Logout</Button>
+          <Button onClick={handleLogout}>Keluar</Button>
         </>
       ) : (
         <Link className="link" to="/login">
-          Login
+          Masuk
         </Link>
       )}
     </div>

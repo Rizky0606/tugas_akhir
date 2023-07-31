@@ -1,9 +1,11 @@
 // TODO: answer here
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { Button, Input, Select } from "@chakra-ui/react";
+import { Button, Input, Select, Text } from "@chakra-ui/react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import { db } from "../../firebase";
+import { ref, onValue, update } from "firebase/database";
 
 const EditStudent = () => {
   // TODO: answer here
@@ -16,25 +18,30 @@ const EditStudent = () => {
     birthDate: "",
     gender: "",
     programStudy: "",
+    faculty: "",
   });
   const [loading, setLoading] = useState(true);
-  const [name, setName] = useState("");
-  const [address, setAddress] = useState();
-  const [phoneNumber, setPhoneNumber] = useState();
-  const [date, setDate] = useState();
-  const [gender, setGender] = useState("Male");
-  const [prody, setPrody] = useState("Ekonomi");
+  // const [name, setName] = useState("");
+  // const [address, setAddress] = useState();
+  // const [phoneNumber, setPhoneNumber] = useState();
+  // const [date, setDate] = useState();
+  // const [gender, setGender] = useState("Male");
+  // const [prody, setPrody] = useState("Ekonomi");
   // let faculty = "";
 
-  // if (prody === "Ekonomi" || prody === "Manajemen" || prody === "Akuntansi") {
+  // if (
+  //   programStudy === "Ekonomi" ||
+  //   programStudy === "Manajemen" ||
+  //   programStudy === "Akuntansi"
+  // ) {
   //   faculty = "Fakultas Ekonomi";
   // } else if (
-  //   prody === "Administrasi Publik" ||
-  //   prody === "Administrasi Bisnis" ||
-  //   prody === "Hubungan Internasional"
+  //   programStudy === "Administrasi Publik" ||
+  //   programStudy === "Administrasi Bisnis" ||
+  //   programStudy === "Hubungan Internasional"
   // ) {
   //   faculty = "Fakultas Ilmu Sosial dan Politik";
-  // } else if (prody === "Teknik Sipil" || prody === "Arsitektur") {
+  // } else if (programStudy === "Teknik Sipil" || programStudy === "Arsitektur") {
   //   faculty = "Fakultas Teknik";
   // } else {
   //   faculty = "Fakultas Teknologi Informasi dan Sains";
@@ -56,7 +63,7 @@ const EditStudent = () => {
 
   const handleChangePhoneNumber = (e) => {
     setData((prevStudent) => ({
-      ...prevStuudent,
+      ...prevStudent,
       phoneNumber: e.target.value,
     }));
   };
@@ -82,31 +89,47 @@ const EditStudent = () => {
     }));
   };
 
+  const handleChangeFaculty = (e) => {
+    setData((prevStudent) => ({
+      ...prevStudent,
+      faculty: e.target.value,
+    }));
+  };
+
   useEffect(() => {
-    fetch(`http://localhost:3001/student/${params.id}`)
-      .then((res) => res.json())
-      .then((json) => {
-        setData(json);
-        setLoading(false);
-      });
+    // fetch(`http://localhost:3001/student/${params.id}`)
+    //   .then((res) => res.json())
+    //   .then((json) => {
+    //     setData(json);
+    //     setLoading(false);
+    //   });
+
+    onValue(ref(db, `/student/${params.id}`), (snapshot) => {
+      const data = snapshot.val();
+      setData(data);
+      setLoading(false);
+    });
   }, []);
 
   const editData = (e) => {
     e.preventDefault();
-    fetch(`http://localhost:3001/student/${params.id}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    })
-      .then(() => {
-        setLoading(false);
-        navigate("/student");
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    // fetch(`http://localhost:3001/student/${params.id}`, {
+    //   method: "PUT",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify(data),
+    // })
+    //   .then(() => {
+    //     setLoading(false);
+    //     navigate("/student");
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //   });
+
+    update(ref(db, `/student/${params.id}`), data);
+    navigate("/student");
   };
 
   return (
@@ -117,14 +140,12 @@ const EditStudent = () => {
         <p>Loading ...</p>
       ) : (
         <div className="edit-student">
-          <img
-            style={{ borderRadius: "50%", boxSize: "150px", margin: "auto" }}
-            src={data.profilePicture}
-            alt={data.fullname}
-          />
+          <Text fontWeight={700} fontSize="20px" ml="30px">
+            Edit Mahasiswa
+          </Text>
           <form action="" id="form-student">
             <label>
-              Fullname
+              Nama Lengkap
               <Input
                 type="text"
                 data-testid="name"
@@ -134,7 +155,7 @@ const EditStudent = () => {
               />
             </label>
             <label>
-              Address
+              Alamat
               <Input
                 type="text"
                 value={data.address}
@@ -144,7 +165,7 @@ const EditStudent = () => {
               />
             </label>
             <label>
-              Phone Number
+              Nomor Telepon
               <Input
                 type="text"
                 value={data.phoneNumber}
@@ -154,7 +175,7 @@ const EditStudent = () => {
               />
             </label>
             <label>
-              Birth Date
+              Tanggal Lahir
               <Input
                 type="date"
                 value={data.birthDate}
@@ -166,7 +187,7 @@ const EditStudent = () => {
             </label>
 
             <label>
-              Gender
+              Jenis Kelamin
               <Select
                 id="input-gender"
                 value={data.gender}
@@ -174,14 +195,14 @@ const EditStudent = () => {
                 onChange={handleChangeGender}
                 required
               >
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
+                <option value="Laki - Laki">Laki - Laki</option>
+                <option value="Perempuan">Perempuan</option>
               </Select>
               <br />
             </label>
 
             <label>
-              Program Study
+              Program Studi
               <Select
                 id="input-prody"
                 value={data.programStudy}
@@ -214,7 +235,7 @@ const EditStudent = () => {
               id="add-btn"
               onClick={editData}
             >
-              Edit student
+              Edit Mahasiswa
             </Button>
           </form>
         </div>

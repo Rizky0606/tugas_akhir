@@ -1,50 +1,86 @@
 // TODO: answer here
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { Button, Input, Select } from "@chakra-ui/react";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
+import { db } from "../../firebase";
+import { ref, onValue, update } from "firebase/database";
 
 const EditDosen = () => {
   // TODO: answer here
   const params = useParams();
   const navigate = useNavigate();
-  const [data, setData] = useState();
+  const [data, setData] = useState({
+    fullname: "",
+    phoneNumber: "",
+    gender: "",
+    mataKuliah: "",
+  });
   const [loading, setLoading] = useState(true);
-  const [name, setName] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState();
-  const [mataKuliah, setMataKuliah] = useState();
-  const [gender, setGender] = useState("Male");
 
-  let dosen = {
-    fullname: name,
-    phoneNumber: phoneNumber,
-    gender: gender,
-    mataKuliah: mataKuliah,
-  };
+  // fetch(`http://localhost:3001/dosen/${params.id}`)
+  //   .then((res) => res.json())
+  //   .then((json) => {
+  //     setData(json);
+  //     setLoading(false);
+  //   });
 
-  fetch(`http://localhost:3001/dosen/${params.id}`)
-    .then((res) => res.json())
-    .then((json) => {
-      setData(json);
+  useEffect(() => {
+    onValue(ref(db, `/dosen/${params.id}`), (snapshot) => {
+      const data = snapshot.val();
+      setData(data);
       setLoading(false);
     });
+  }, []);
 
-  const editData = () => {
-    fetch(`http://localhost:3001/dosen/${params.id}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(dosen),
-    })
-      .then(() => {
-        setLoading(false);
-        navigate("/dosen");
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+  const editData = (e) => {
+    e.preventDefault();
+    // fetch(`http://localhost:3001/dosen/${params.id}`, {
+    //   method: "PUT",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify(dosen),
+    // })
+    //   .then(() => {
+    //     setLoading(false);
+    //     navigate("/dosen");
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //   });
+
+    update(ref(db, `/dosen/${params.id}`), data);
+    navigate("/dosen");
+  };
+
+  const handleChangeFullname = (e) => {
+    setData((prevStudent) => ({
+      ...prevStudent,
+      fullname: e.target.value,
+    }));
+  };
+
+  const handleChangeGender = (e) => {
+    setData((prevStudent) => ({
+      ...prevStudent,
+      gender: e.target.value,
+    }));
+  };
+
+  const handleChangePhoneNumber = (e) => {
+    setData((prevStudent) => ({
+      ...prevStudent,
+      phoneNumber: e.target.value,
+    }));
+  };
+
+  const handleChangeMataKuliah = (e) => {
+    setData((prevStudent) => ({
+      ...prevStudent,
+      mataKuliah: e.target.value,
+    }));
   };
 
   return (
@@ -55,29 +91,24 @@ const EditDosen = () => {
         <p>Loading ...</p>
       ) : (
         <div>
-          <img
-            style={{ borderRadius: "50%", boxSize: "150px", margin: "auto" }}
-            src={data.profilePicture}
-            alt={data.fullname}
-          />
           <form action="">
             <label>
-              Fullname
+              Nama Lengkap
               <Input
                 type="text"
                 data-testid="name"
                 value={data.fullname}
-                onChange={(e) => setName(e.target.value)}
+                onChange={handleChangeFullname}
                 required
               />
             </label>
             <label>
-              Phone Number
+              Nomor Telepon
               <Input
                 type="text"
                 value={data.phoneNumber}
                 data-testid="phoneNumber"
-                onChange={(e) => setPhoneNumber(e.target.value)}
+                onChange={handleChangePhoneNumber}
                 required
               />
             </label>
@@ -87,22 +118,22 @@ const EditDosen = () => {
                 type="text"
                 value={data.mataKuliah}
                 data-testid="phoneNumber"
-                onChange={(e) => setMataKuliah(e.target.value)}
+                onChange={handleChangeMataKuliah}
                 required
               />
             </label>
 
             <label>
-              Gender
+              Jenis Kelamin
               <Select
                 id="input-gender"
                 value={data.gender}
                 data-testid="gender"
-                onChange={(e) => setGender(e.target.value)}
+                onChange={handleChangeGender}
                 required
               >
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
+                <option value="Laki - Laki">Laki - Laki</option>
+                <option value="Perempuan">Perempuan</option>
               </Select>
               <br />
             </label>

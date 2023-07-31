@@ -13,21 +13,34 @@ import {
   Td,
   TableContainer,
   Button,
+  Text,
 } from "@chakra-ui/react";
+import { db } from "../../firebase";
+import { ref, onValue, remove } from "firebase/database";
 
 const Student = () => {
   // TODO: answer here
-  const [data, setData] = useState();
+  const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [filterData, setFilterData] = useState("All");
+  const [filterData, setFilterData] = useState("Semua");
 
   const navigate = useNavigate();
 
   const loadPage = async () => {
-    const response = await fetch(" http://localhost:3001/student");
-    const json = await response.json();
-    setData(json);
-    setLoading(false);
+    // const response = await fetch(" http://localhost:3001/student");
+    // const json = await response.json();
+    // setData(json);
+    // setLoading(false);
+    onValue(ref(db, "/student"), (snapshot) => {
+      setData([]);
+      const data = snapshot.val();
+      if (data !== null) {
+        Object.values(data).map((datas) => {
+          setData((oldArray) => [...oldArray, datas]);
+          setLoading(false);
+        });
+      }
+    });
   };
 
   useEffect(() => {
@@ -35,18 +48,19 @@ const Student = () => {
   }, []);
 
   const handleCLickDeleteButton = (id) => {
-    fetch(` http://localhost:3001/student/${id}`, {
-      method: "DELETE",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then(() => {
-        loadPage();
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    // fetch(` http://localhost:3001/student/${id}`, {
+    //   method: "DELETE",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    // })
+    //   .then(() => {
+    //     loadPage();
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    //   });
+    remove(ref(db, `/student/${id}`));
   };
 
   const handleChangeFaculty = (e) => {
@@ -62,7 +76,9 @@ const Student = () => {
       {/* TODO: answer here */}
       <Navbar />
       <div className="head-student">
-        <h2>All Student</h2>
+        <Text fontWeight={700} fontSize="20px" ml="30px">
+          Mahasiswa
+        </Text>
 
         <Select
           w="50%"
@@ -73,7 +89,7 @@ const Student = () => {
           onChange={handleChangeFaculty}
           value={filterData}
         >
-          <option value="All">All</option>
+          <option value="Semua">Semua</option>
           <option value="Fakultas Ekonomi">Fakultas Ekonomi</option>
           <option value="Fakultas Ilmu Sosial dan Politik">
             Fakultas Ilmu Sosial dan Politik
@@ -92,18 +108,18 @@ const Student = () => {
             <Thead>
               <Tr>
                 <Th>No</Th>
-                <Th>Full Name</Th>
-                <Th>Faculty</Th>
-                <Th>Program Study</Th>
-                <Th>Option</Th>
+                <Th>Nama Lengkap</Th>
+                <Th>Fakultas</Th>
+                <Th>Program Studi</Th>
+                <Th>Aksi</Th>
               </Tr>
             </Thead>
             <Tbody>
-              {filterData === "All"
-                ? data?.map((datas) => {
+              {filterData === "Semua"
+                ? data?.map((datas, index) => {
                     return (
-                      <Tr key={datas.id} className="student-data-row">
-                        <Td>{datas.id}</Td>
+                      <Tr key={index} className="student-data-row">
+                        <Td>{index + 1}</Td>
                         <Td>
                           <Link to={`/student/profile/${datas.id}`}>
                             {datas.fullname}
@@ -127,10 +143,10 @@ const Student = () => {
                       </Tr>
                     );
                   })
-                : filteredData.map((datas) => {
+                : filteredData.map((datas, index) => {
                     return (
-                      <tr key={datas.id} className="student-data-row">
-                        <Td>{datas.id}</Td>
+                      <tr key={index} className="student-data-row">
+                        <Td>{index + 1}</Td>
                         <Td>
                           <Link to={`/student/profile/${datas.id}`}>
                             {datas.fullname}

@@ -1,10 +1,12 @@
+import { getDatabase } from "firebase/database";
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyAKzuPIug25REX46RmYT8yom1KqsSyyLHQ",
   authDomain: "student-portal-fauzi.firebaseapp.com",
+  databaseURL:
+    "https://student-portal-fauzi-default-rtdb.asia-southeast1.firebasedatabase.app",
   projectId: "student-portal-fauzi",
   storageBucket: "student-portal-fauzi.appspot.com",
   messagingSenderId: "77935445032",
@@ -13,4 +15,5 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app);
+const auth = getAuth(app);
+export const db = getDatabase(app);

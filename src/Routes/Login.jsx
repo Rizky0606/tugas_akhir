@@ -46,7 +46,6 @@ const Login = () => {
     const provider = new FacebookAuthProvider();
     signInWithPopup(auth, provider)
       .then((result) => {
-        console.info(result.user);
         localStorage.setItem("user", JSON.stringify(result.user));
         navigate("/");
       })
