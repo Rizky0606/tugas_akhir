@@ -18,7 +18,7 @@ import { ref, onValue } from "firebase/database";
 
 const ProfileStudent = () => {
   const [data, setData] = useState([]);
-  const [dataNilai, setDataNilai] = useState();
+  // const [dataNilai, setDataNilai] = useState();
   const [loading, setLoading] = useState(true);
   // const [filterData, setFilterData] = useState("semester1");
   const params = useParams();

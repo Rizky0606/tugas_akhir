@@ -14,6 +14,9 @@ const EditDosen = () => {
   const [data, setData] = useState({
     fullname: "",
     phoneNumber: "",
+    alamat: "",
+    programStudi: "",
+    jabatan: "",
     gender: "",
     mataKuliah: "",
   });
@@ -83,6 +86,27 @@ const EditDosen = () => {
     }));
   };
 
+  const handleChangeAlamat = (e) => {
+    setData((prevStudent) => ({
+      ...prevStudent,
+      alamat: e.target.value,
+    }));
+  };
+
+  const handleChangeProgramStudi = (e) => {
+    setData((prevStudent) => ({
+      ...prevStudent,
+      programStudi: e.target.value,
+    }));
+  };
+
+  const handleChangeJabatan = (e) => {
+    setData((prevStudent) => ({
+      ...prevStudent,
+      jabatan: e.target.value,
+    }));
+  };
+
   return (
     <>
       {/* TODO: answer here */}
@@ -90,7 +114,7 @@ const EditDosen = () => {
       {loading ? (
         <p>Loading ...</p>
       ) : (
-        <div>
+        <div style={{ marginLeft: "20px" }}>
           <form action="">
             <label>
               Nama Lengkap
@@ -122,6 +146,17 @@ const EditDosen = () => {
                 required
               />
             </label>
+            <label>
+              Alamat
+              <Input
+                type="text"
+                data-testid="alamat"
+                value={data.alamat}
+                onChange={handleChangeAlamat}
+                required
+              />
+              <br />
+            </label>
 
             <label>
               Jenis Kelamin
@@ -134,6 +169,48 @@ const EditDosen = () => {
               >
                 <option value="Laki - Laki">Laki - Laki</option>
                 <option value="Perempuan">Perempuan</option>
+              </Select>
+              <br />
+            </label>
+
+            <label>
+              Program Studi
+              <Select
+                id="input-prody"
+                data-testid="prody"
+                value={data.programStudi}
+                onChange={handleChangeProgramStudi}
+                required
+              >
+                <option value="Ekonomi">Ekonomi</option>
+                <option value="Manajemen">Manajemen</option>
+                <option value="Akuntansi">Akuntansi</option>
+                <option value="Administrasi Publik">Administrasi Publik</option>
+                <option value="Administrasi Bisnis">Administrasi Bisnis</option>
+                <option value="Hubungan Internasional">
+                  Hubungan Internasional
+                </option>
+                <option value="Teknik Sipil">Teknik Sipil</option>
+                <option value="Arsitektur">Arsitektur</option>
+                <option value="Matematika">Matematika</option>
+                <option value="Fisika">Fisika</option>
+                <option value="Informatika">Informatika</option>
+              </Select>
+              <br />
+            </label>
+
+            <label>
+              Jabatan
+              <Select
+                id="input-matkul"
+                value={data.jabatan}
+                onChange={handleChangeJabatan}
+                required
+              >
+                <option value="Kaprodi">Kaprodi</option>
+                <option value="Wakaprodi">Wakaprodi</option>
+                <option value="Sekertaris">Sekertaris</option>
+                <option value="Dosen Pengajar">Dosen Pengajar</option>
               </Select>
               <br />
             </label>

@@ -15,6 +15,7 @@ import {
   Button,
   Text,
 } from "@chakra-ui/react";
+import Swal from "sweetalert2";
 import { db } from "../../firebase";
 import { ref, onValue, remove } from "firebase/database";
 
@@ -60,7 +61,20 @@ const Student = () => {
     //   .catch((err) => {
     //     console.log(err);
     //   });
-    remove(ref(db, `/student/${id}`));
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        remove(ref(db, `/student/${id}`));
+        Swal.fire("Deleted!", "Student has been deleted.", "success");
+      }
+    });
   };
 
   const handleChangeFaculty = (e) => {
@@ -137,7 +151,7 @@ const Student = () => {
                               handleCLickDeleteButton(datas.id);
                             }}
                           >
-                            Delete
+                            Hapus
                           </Button>
                         </Td>
                       </Tr>
@@ -162,7 +176,7 @@ const Student = () => {
                             data-testid={`delete-${datas.id}`}
                             onClick={() => handleCLickDeleteButton(datas.id)}
                           >
-                            Delete
+                            Hapus
                           </Button>
                         </Td>
                       </tr>

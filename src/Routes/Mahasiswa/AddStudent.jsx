@@ -167,7 +167,7 @@ const AddStudent = () => {
           id="add-btn"
           onClick={addStudent}
         >
-          Add student
+          Tambah Mahasiswa
         </Button>
       </form>
       <Footer />

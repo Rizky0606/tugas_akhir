@@ -15,6 +15,7 @@ import {
   Button,
   Text,
 } from "@chakra-ui/react";
+import Swal from "sweetalert2";
 import { db } from "../../firebase";
 import { ref, onValue, remove } from "firebase/database";
 
@@ -61,7 +62,20 @@ const Dosen = () => {
     //     console.log(err);
     //   });
 
-    remove(ref(db, `/dosen/${id}`));
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        remove(ref(db, `/dosen/${id}`));
+        Swal.fire("Deleted!", "Dosen has been deleted.", "success");
+      }
+    });
   };
 
   return (

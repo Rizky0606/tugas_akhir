@@ -10,7 +10,15 @@ const NotFound = () => {
   return (
     <>
       <Navbar />
-      <div align="center" height="90vh">
+      <div
+        style={{
+          height: "100vh",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
         {/* TODO: answer here */}
         <h1 style={{ fontSize: "30px" }}>404 | Not Found</h1>
         <Button

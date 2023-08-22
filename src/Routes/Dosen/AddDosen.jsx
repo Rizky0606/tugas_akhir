@@ -13,6 +13,9 @@ const AddDosen = () => {
   const [name, setName] = useState("");
   const [profile, setProfile] = useState();
   const [phoneNumber, setPhoneNumber] = useState();
+  const [alamat, setAlamat] = useState();
+  const [programStudi, setProgramStudi] = useState("Ekonomi");
+  const [jabatan, setJabatan] = useState("Kaprodi");
   const [gender, setGender] = useState("Laki -Laki");
   const [mataKuliah, setMataKuliah] = useState("Bahasa Inggris");
   const navigate = useNavigate();
@@ -24,6 +27,9 @@ const AddDosen = () => {
     fullname: name,
     profilePicture: profile,
     phoneNumber: phoneNumber,
+    alamat: alamat,
+    programStudi: programStudi,
+    jabatan: jabatan,
     gender: gender,
     mataKuliah: mataKuliah,
   };
@@ -83,6 +89,15 @@ const AddDosen = () => {
             required
           />
         </label>
+        <label>
+          Alamat
+          <Input
+            type="text"
+            data-testid="alamat"
+            onChange={(e) => setAlamat(e.target.value)}
+            required
+          />
+        </label>
 
         <label>
           Jenis Kelamin
@@ -115,6 +130,46 @@ const AddDosen = () => {
             <option value="Aplikasi Kewirausahaan">
               Aplikasi Kewirausahaan
             </option>
+          </Select>
+          <br />
+        </label>
+
+        <label>
+          Program Studi
+          <Select
+            id="input-prody"
+            data-testid="prody"
+            onChange={(e) => setProgramStudi(e.target.value)}
+            required
+          >
+            <option value="Ekonomi">Ekonomi</option>
+            <option value="Manajemen">Manajemen</option>
+            <option value="Akuntansi">Akuntansi</option>
+            <option value="Administrasi Publik">Administrasi Publik</option>
+            <option value="Administrasi Bisnis">Administrasi Bisnis</option>
+            <option value="Hubungan Internasional">
+              Hubungan Internasional
+            </option>
+            <option value="Teknik Sipil">Teknik Sipil</option>
+            <option value="Arsitektur">Arsitektur</option>
+            <option value="Matematika">Matematika</option>
+            <option value="Fisika">Fisika</option>
+            <option value="Informatika">Informatika</option>
+          </Select>
+          <br />
+        </label>
+
+        <label>
+          Jabatan
+          <Select
+            id="input-matkul"
+            onChange={(e) => setJabatan(e.target.value)}
+            required
+          >
+            <option value="Kaprodi">Kaprodi</option>
+            <option value="Wakaprodi">Wakaprodi</option>
+            <option value="Sekertaris">Sekertaris</option>
+            <option value="Dosen Pengajar">Dosen Pengajar</option>
           </Select>
         </label>
         <br />

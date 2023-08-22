@@ -53,6 +53,10 @@ const ProfileDosen = () => {
                 <Td>{data.fullname}</Td>
               </Tr>
               <Tr>
+                <Td>Alamat</Td>
+                <Td>{data.alamat}</Td>
+              </Tr>
+              <Tr>
                 <Td>Jenis Kelamin</Td>
                 <Td>{data.gender}</Td>
               </Tr>
@@ -63,6 +67,14 @@ const ProfileDosen = () => {
               <Tr>
                 <Td>Mata Kuliah</Td>
                 <Td>{data.mataKuliah}</Td>
+              </Tr>
+              <Tr>
+                <Td>Program Studi</Td>
+                <Td>{data.programStudi}</Td>
+              </Tr>
+              <Tr>
+                <Td>Jabatan</Td>
+                <Td>{data.jabatan}</Td>
               </Tr>
             </Thead>
           </Table>
